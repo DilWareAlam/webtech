@@ -1,0 +1,22 @@
+$git clone URL // clone korara por project er sob kisu clone file e rakhbo.
+
+
+$git add . or a.txt(file name) //add korbo sob kisu
+
+
+$git status //status janbo
+
+
+$git commit -m "comment korbo version er" //version er commit er korbo
+
+
+$git push or git push origin master //file ta push korbo ei khane.
+
+
+$git rm a.txt //jodi kono file remove korte chai ami ei tar por commit korte hobe
+
+
+$git pull //pull korbo sob kisu up to date korar jonno
+
+
+$git log //oi repo te ki ki ase, and ki ki details show kore tar sob kisu dekhbe git bash
