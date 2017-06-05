@@ -16,6 +16,9 @@ $git push or git push origin master //file ta push korbo ei khane.
 $git rm a.txt //jodi kono file remove korte chai ami ei tar por commit korte hobe
 
 
+$git checkout -- a.txt //checkout hote hobe shopping ba e coomerce site er moto
+
+
 $git pull //pull korbo sob kisu up to date korar jonno
 
 
