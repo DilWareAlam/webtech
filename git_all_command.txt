@@ -22,9 +22,11 @@ $git checkout -- a.txt //checkout hote hobe shopping ba e coomerce site er moto
 $git pull //pull korbo sob kisu up to date korar jonno
 
 
-youtube link for git hub: https://www.youtube.com/watch?v=J_Clau1bYco
-
-how to in stall laravel youtube link: https://www.youtube.com/watch?v=cnAl3UxvK-w
-
 
 $git log //oi repo te ki ki ase, and ki ki details show kore tar sob kisu dekhbe git bash
+
+
+youtube link for git hub: https://www.youtube.com/watch?v=J_Clau1bYco
+
+
+how to in stall laravel youtube link: https://www.youtube.com/watch?v=cnAl3UxvK-w
