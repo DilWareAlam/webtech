@@ -34,4 +34,4 @@ $git log //oi repo te ki ki ase, and ki ki details show kore tar sob kisu dekhbe
 youtube link for git hub: https://www.youtube.com/watch?v=J_Clau1bYco
 
 
-how to in stall laravel youtube link: https://www.youtube.com/watch?v=cnAl3UxvK-w
+how to install laravel youtube link: https://www.youtube.com/watch?v=cnAl3UxvK-w
