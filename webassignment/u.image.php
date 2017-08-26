@@ -1,7 +1,7 @@
 <?php
 include('connect.php');
 session_start();
-$page = $_SERVER['PHP_SELF'];
+$page = $_SERVER['PHP_SELF']; // executing script, relative to the document root
 $sec = "2";
 ?>
 
@@ -55,7 +55,8 @@ $sec = "2";
               // if upload button is clicked
               if(isset($_POST['upload'])){
              // the path to store the upload image
-              $target = "images/".basename($_FILES['image']['name']);
+              $target = "images/".basename($_FILES['image']['name']); //basename() operates naively on the input string, and is not aware of the actual filesystem, or path 
+              
               //connect database
               //get all the data from the form
               $image = $_FILES['image']['name'];

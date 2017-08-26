@@ -36,16 +36,16 @@ if(isset($_POST['submit'])){
 $name=$_POST['name'];
 $pass=$_POST['pass'];
 $sql = "SELECT * FROM users WHERE u_name = '$name' and u_pass = '$pass'";
-      $result = mysqli_query($conn,$sql);
-      $row = mysqli_fetch_assoc($result);      
-      $count = mysqli_num_rows($result);
+      $result = mysqli_query($conn,$sql);//function performs a query against the database.
+      $row = mysqli_fetch_assoc($result);// Fetch a result row as an associative array    
+      $count = mysqli_num_rows($result);//function returns the number of rows in a result set.
       
       // If result matched $myusername and $mypassword, table row must be 1 row
     
       if($count==1)
       {
     session_start();
-    $_SESSION['loggedid'] = $row['u_id'];
+    $_SESSION['loggedid'] = $row['u_id']; //An associative array containing session variables available to the current script. See the Session functions documentation for more information on how this is used.
     header("location:u.index.php");
     } else{
       echo "<h5>Try again...</h5>";

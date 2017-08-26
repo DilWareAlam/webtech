@@ -13,7 +13,7 @@
 <!--   <li><a href="#about">About</a></li> -->
 </ul>
 
-<div class="signup">
+<div class="signup"> 
 <h1 style="color: white; text-align: center;">SignUp</h1>
 	<table>
 		<form action="" method="post">
@@ -28,7 +28,9 @@
 		</form>
 	</table>
 	<p>
-		SignUp Already? Sign In <a href="signin.php"><b>Here</b></a>
+		SignUp Already? Sign In <a href="signin.php"><b>Here</b></a> <!--The href attribute specifies the URL of the page the link goes to.
+
+If the href attribute is not present, the <a> tag is not a hyperlink. -->
 	</p>
 </div>
 
@@ -37,9 +39,9 @@
 
 <?php 
 
-session_start();
+session_start(); //Start new or resume existing session
 
-include("connect.php");
+include("connect.php"); 
 //sign up part
 
 if(isset($_POST['submit'])) //The isset () function is used to check whether a variable is set or not. If a variable is already unset with unset() function, it will no longer be set. The isset() function return false if testing variable contains a NULL

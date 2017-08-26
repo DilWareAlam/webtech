@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 21, 2017 at 08:21 PM
+-- Generation Time: Aug 22, 2017 at 05:13 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -56,19 +56,24 @@ CREATE TABLE `comment` (
   `c_id` int(11) NOT NULL,
   `c_text` text NOT NULL,
   `c_date` datetime NOT NULL,
-  `u_id` int(11) DEFAULT NULL
+  `u_id` int(11) DEFAULT NULL,
+  `u_name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `comment`
 --
 
-INSERT INTO `comment` (`c_id`, `c_text`, `c_date`, `u_id`) VALUES
-(1, 'hello', '2017-07-02 02:50:54', 3),
-(2, 't439ruerewrewu', '2017-08-01 12:47:43', 3),
-(3, 'hi\r\n', '2017-08-15 12:50:07', 4),
-(4, 'hii', '2017-08-15 14:30:57', 4),
-(5, 'hii', '2017-08-15 14:42:01', 4);
+INSERT INTO `comment` (`c_id`, `c_text`, `c_date`, `u_id`, `u_name`) VALUES
+(1, 'hello', '2017-07-02 02:50:54', 3, ''),
+(2, 't439ruerewrewu', '2017-08-01 12:47:43', 3, ''),
+(3, 'hi\r\n', '2017-08-15 12:50:07', 4, ''),
+(4, 'hii', '2017-08-15 14:30:57', 4, ''),
+(5, 'hii', '2017-08-15 14:42:01', 4, ''),
+(6, 'hi', '2017-08-22 09:05:15', 4, ''),
+(7, 'hi', '2017-08-22 09:06:12', 4, 'alam'),
+(8, 'kmn asso', '2017-08-22 09:06:27', 4, 'alam'),
+(9, 'hlw every one', '2017-08-22 09:07:27', 5, 'alvee');
 
 -- --------------------------------------------------------
 
@@ -164,7 +169,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`u_id`, `u_name`, `u_email`, `u_age`, `u_address`, `u_cont`, `u_pass`) VALUES
 (3, 'Sanjib', 'sanjib@gmail.com', 24, 'dhaka', '0', '123'),
-(4, 'alam', 'alam@gmail.com', 20, 'rajshahi', '0', '123');
+(4, 'alam', 'alam@gmail.com', 20, 'rajshahi', '0', '123'),
+(5, 'alvee', 'a@gmail.com', 10, 'dhaka', '01744', '123');
 
 --
 -- Indexes for dumped tables
@@ -181,7 +187,8 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `comment`
   ADD PRIMARY KEY (`c_id`),
-  ADD KEY `u_id` (`u_id`);
+  ADD KEY `u_id` (`u_id`),
+  ADD KEY `u_name` (`u_name`);
 
 --
 -- Indexes for table `comment2`
@@ -223,7 +230,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `comment2`
 --
@@ -243,7 +250,7 @@ ALTER TABLE `image2`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- Constraints for dumped tables
 --

@@ -46,7 +46,7 @@ $sec = "2";
 <?php
 if(isset($_POST['submit'])){
   $txt = $_POST['num'];
-  $sql = "INSERT INTO comment(c_text,c_date,u_id)values('$txt',now(),'$_SESSION[loggedid]')";
+  $sql = "INSERT INTO comment(c_text,c_date,u_id,u_name)values('$txt',now(),'$_SESSION[loggedid]','$a')"; //The PHP date() function formats a timestamp to a more readable date and time.
   $result = mysqli_query($conn, $sql);
   if ($result){
     //header('location: u.index.php');
@@ -63,6 +63,7 @@ if(isset($_POST['submit'])){
 
   <tr bgcolor='#CCCCCC' align="center">
     <td style="width: 5%;">Posted Id</td>
+    <td style="width: 10%;">Name</td>
     <td style="width: 20%;">Post Date</td>
     <td style="width: 85%;">Post Content</td>
   </tr>
@@ -76,6 +77,7 @@ if(isset($_POST['submit'])){
    {
     echo "<tr>";
     echo "<td>".$res['u_id']."</td>";
+    echo "<td>".$res['u_name']."</td>";
     echo "<td>".$res['c_date']."</td>";
     echo "<td>".$res['c_text']."</td>";
 
